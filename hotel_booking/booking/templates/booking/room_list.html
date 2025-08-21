@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hotel Booking</title>
+    </head>
+        <body>
+            <h1>Available Rooms</h1>
+        {% for room in rooms %}
+            <hr>
+            <h2>Room{{ room.number }}</h2>
+            <p>Type: {{ room.get_room_type_display }}</p>
+            <p>price per night: ${{ room.price_per_night }}</p>
+            <p><a href="{% url 'book_room' room.id %}">Book Now</a></p> 
+        {% empty %}
+        <p> NO ROOMS AVAILABLE AT THE MOMENT...</p>
+        {% endfor %}   
+</body>
+</html>

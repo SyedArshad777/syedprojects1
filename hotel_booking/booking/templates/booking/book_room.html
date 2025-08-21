@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Book Room</title>
+    </head>
+    <body>
+        <h1> Book Room</h1>
+        <form method="post">
+            {% csrf_token %}
+            <p>name:<input type="text" name="guest_name" required></p>
+            <p>Email:<input type="email" name="guest_email" required></p>
+            <p>check_in Date:<input type="datetime" name="check_in" required></p>
+            <p>check_out Date:<input type="datetime" name="check_out" required></p>
+            <button type="submit">Book</button>
+        </form>
+    </body>
+</html>
