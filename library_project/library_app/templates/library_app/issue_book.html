@@ -1,0 +1,7 @@
+<h2>Issue Book</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Issue</button>
+</form>
+<a href="/issues/">View Issued Books</a>

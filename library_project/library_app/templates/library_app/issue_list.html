@@ -1,0 +1,7 @@
+<h2>Issued Books</h2>
+<ul>
+  {% for issue in issues %}
+    <li>{{ issue.book.title }} → {{ issue.member.name }} (Return: {{ issue.return_date }})</li>
+  {% endfor %}
+</ul>
+<a href="/issue-book/">Issue New Book</a>

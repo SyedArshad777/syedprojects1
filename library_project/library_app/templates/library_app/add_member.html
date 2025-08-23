@@ -1,0 +1,7 @@
+<!-- templates/library_app/add_member.html -->
+<h1>Add Member</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add</button>
+</form>
